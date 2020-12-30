@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // Webpack で ES5に変換されるのでここでは最新の仕様
+    "module": "commonjs",
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "./dist", // Webpack で出力先は指定するが、念の為・・・
+    "strict": true,
+    "esModuleInterop": true,
+    "sourceRoot": "./src",
+    "forceConsistentCasingInFileNames": true
+  },
+  // コンパイル対象のファイル
+  "files": [
+    "src/main.ts", // メインプロセス用
+    "src/core/preLoad.ts"
+    // レンダープロセスは Webpack でターゲットを指定するので、ここでは不要
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ],
+}
